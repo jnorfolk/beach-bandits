@@ -1,0 +1,18 @@
+.routes {
+  margin-top: 50px;
+  color: lightgreen;
+  display: none;
+}
+
+.routes_visible {
+  display: block;
+}
+
+.routes__title {
+  margin: 0;
+}
+
+.routes__list {
+  padding: 0;
+  list-style: none;
+}

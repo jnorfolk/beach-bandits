@@ -1,1 +1,7 @@
 @import url(../vendor/normalize.css);
+@import url(../blocks/page.css);
+@import url(../blocks/header.css);
+@import url(../blocks/intro.css);
+@import url(../blocks/selection.css);
+@import url(../blocks/route.css);
+@import url(../blocks/routes.css);

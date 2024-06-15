@@ -3,9 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="description" content="Beach Bandits" />
+    <title>Beach Bandits</title>
+    <link rel="favicon" href="./favicon.ico" />
   </head>
-  <body>
-    <h1>Hello world!</h1>
+  <body class="page">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__text-elements">
+          <h1 class="header__title">BEACH BANDITS</h1>
+          <h2 class="header__subtitle">
+            Plan your next beach-hopping adventure!
+          </h2>
+        </div>
+        <div class="selection__wrapper">
+          <select name="beaches" id="beaches" class="selection__dropdown">
+            <option value="miami-1" class="selection__dropdown-option">
+              Miami Beach South
+            </option>
+            <option value="miami-2" class="selection__dropdown-option">
+              Miami Beach Mid
+            </option>
+            <option value="miami-3" class="selection__dropdown-option">
+              Miami Beach North
+            </option>
+          </select>
+          <button class="selection__submit-button" type="submit">Go!</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- test list -->
+      <section class="routes routes_visible page__section">
+        <h2 class="routes__title">Your optimized route:</h2>
+        <ul class="routes__list">
+          <li class="route">
+            <div class="route__container">
+              <div class="route__text-container">
+                <h3 class="route__title">Phil Foster Beach</h3>
+                <p class="route__body">
+                  900 Blue Heron Blvd, Riviera Beach, FL 33404
+                </p>
+              </div>
+              <div class="route__text route__text-distance">
+                <p class="route__mileage">is 999 miles to</p>
+                <p class="route__mileage-arrow">&RightArrow;</p>
+              </div>
+
+              <div class="route__text-container">
+                <h3 class="route__title">Lido Beach</h3>
+                <p class="route__body">
+                  400 Benjamin Franklin Drive Sarasota, FL 34236
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!--  -->
+      <section class="routes page__section">
+        <ul class="routes__list">
+          <template id="route-template">
+            <li class="route">
+              <div class="route__container">
+                <div class="route__text">
+                  <h3 class="route__title">Loc a</h3>
+                  <p class="route__body">123 Main</p>
+                </div>
+                <div class="route__text">
+                  <h3 class="route__title">Loc b</h3>
+                  <p class="route__body">456 Center</p>
+                </div>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </section>
+      <section class="intro page__section">
+        <div class="intro__text-wrapper">
+          <h2 class="intro__subheading">What is Beach Bandits?</h2>
+          <p class="intro__paragraph-text">
+            Beach Bandits makes it easy to plan out a trip between multiple
+            beaches in Florida.
+          </p>
+          <p class="intro__paragraph-text">
+            Whether you are running a food truck, helping the community by
+            cleaning up trash, or simply an avid beach lover - Beach Bandits
+            will help you navigate your next multi-beach outing!
+          </p>
+          <h2 class="intro__subheading">Instructions:</h2>
+          <p class="intro__paragraph-text">
+            Use the drop-down list below to select your starting beach and then
+            click the submit button. An optimal route will be created that will
+            take you to the nearest 10 beaches (starting with the one you've
+            selected) in the shortest distance possible.
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
