@@ -1,5 +1,5 @@
 """
-Note! Use the original updated_beaches.csv rather than updated2_beaches.csv.
+Note! Use the original updated_beaches.csv rather than my new updated2_beaches.csv.
 """
 
 import pandas as pd
@@ -215,10 +215,15 @@ def calculate_route(df, starting_beach, n, algorithm='nearest neighbors'):
     
     # return optimal_route, total_distance, distances
 
+if __name__ == "__main__":
+    # Load the filtered DataFrame
+    filtered_df = preprocess('updated_beaches.csv')
+    
+    # User input for starting beach and number of additional beaches
+    starting_beach = input("Enter the starting beach: ")
+    n = int(input("Enter the number of additional beaches: "))
+    
+    # Calculate the route using the desired algorithm
+    result_json = calculate_route(filtered_df, starting_beach, n, algorithm='brute force')
 
-filtered_df = preprocess('updated_beaches.csv')
-
-# optimal_route, total_distance, distances = calculate_route(filtered_df, starting_beach='Hanna Park', n=7, algorithm='brute force')
-
-json_result = calculate_route(filtered_df, starting_beach='Hanna Park', n=7, algorithm='brute force')
-print(json_result)
+    print(result_json)
