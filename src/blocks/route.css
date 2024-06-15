@@ -6,6 +6,7 @@
   max-width: 300px;
   outline: 2px lightcoral solid;
   border-radius: 5px;
+  background-color: rgba(240, 128, 128, 0.1);
 }
 
 .route__text-distance {
