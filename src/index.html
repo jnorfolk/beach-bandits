@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Beach Bandits" />
     <title>Beach Bandits</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="favicon" href="./favicon.ico" />
   </head>
   <body class="page">
@@ -80,25 +81,51 @@
         </ul>
       </section>
       <section class="intro page__section">
-        <div class="intro__text-wrapper">
-          <h2 class="intro__subheading">What is Beach Bandits?</h2>
-          <p class="intro__paragraph-text">
-            Beach Bandits makes it easy to plan out a trip between multiple
-            beaches in Florida.
-          </p>
-          <p class="intro__paragraph-text">
-            Whether you are running a food truck, helping the community by
-            cleaning up trash, or simply an avid beach lover - Beach Bandits
-            will help you navigate your next multi-beach outing!
-          </p>
-          <h2 class="intro__subheading">Instructions:</h2>
-          <p class="intro__paragraph-text">
-            Use the drop-down list below to select your starting beach and then
-            click the submit button. An optimal route will be created that will
-            take you to the nearest 10 beaches (starting with the one you've
-            selected) in the shortest distance possible.
-          </p>
+        <div id="floating-panel">
+          <b>Start: </b>
+          <select id="start">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+          </select>
+          <b>End: </b>
+          <select id="end">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+          </select>
         </div>
+        <div id="map"></div>
+
+        <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+          defer
+        ></script>
       </section>
     </main>
   </body>

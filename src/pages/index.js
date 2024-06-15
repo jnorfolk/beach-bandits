@@ -33,4 +33,53 @@ function toRadians(degrees) {
   return degrees * (Math.PI / 180);
 }
 
-console.log(haversine(lat1, long1, lat2, long2));
+//
+
+// fetch(
+//   "https://api.geoapify.com/v1/routing?waypoints=25.788158,-80.129423|26.783238,-80.041613|27.311745,-82.576569&mode=drive&apiKey=12e0d4245d144d2e86f962a7a272fca8"
+// )
+//   .then((response) => response.json())
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log("error", error));
+
+function initMap() {
+  const directionsService = new google.maps.DirectionsService();
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 7,
+    center: { lat: 41.85, lng: -87.65 },
+  });
+
+  directionsRenderer.setMap(map);
+
+  const onChangeHandler = function () {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  };
+
+  document.getElementById("start").addEventListener("change", onChangeHandler);
+  document.getElementById("end").addEventListener("change", onChangeHandler);
+}
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  const miami = new google.maps.LatLng(25.788158, -80.129423);
+  const philFoster = new google.maps.LatLng(26.783238, -80.041613);
+  const lido = new google.maps.LatLng(27.311745, -82.576569);
+  directionsService
+    .route({
+      origin: miami,
+      destination: lido,
+      waypoints: [
+        {
+          location: philFoster,
+        },
+      ],
+      travelMode: google.maps.TravelMode.DRIVING,
+    })
+    .then((response) => {
+      directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+}
+
+window.initMap = initMap;
