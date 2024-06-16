@@ -21,3 +21,8 @@ https://aivaxela.github.io/beach-bandits/
 - Extract contents and open in VSCode
 - run command `npm install`
 - run command `npm run dev`
+
+#### Credit:
+
+- Webpage structure and programming by Riley Marcum. Webpage design by Riley Marcum and David Thompson.
+- Data collection, EDA, and preprocessing by Tirso Paneque. Algorithm and development by Joshua Norfolk.
