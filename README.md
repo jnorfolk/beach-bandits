@@ -18,6 +18,7 @@ https://aivaxela.github.io/beach-bandits/
 ### To run the project locally:
 
 - Download the .zip file from the github page
+- Ensure you have Node.js installed on your system
 - Extract contents and open in VSCode
 - run command `npm install`
 - run command `npm run dev`
