@@ -32,7 +32,7 @@
   height: 1px + 100%;
   border: 8px lightcoral solid;
   border-radius: 15px;
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 1.5s ease-in;
 }
 
 .routes__list {
@@ -55,12 +55,12 @@
   margin: 0;
   color: lightgreen;
   font-size: 56px;
-  animation: flyIn 1.5s ease-out;
+  animation: flyIn 1s ease-out;
 }
 
 .routes__subtitle {
   margin: 0;
   color: lightcoral;
   font-size: 24px;
-  animation: flyIn 2.5s ease-out;
+  animation: flyIn 1.5s ease-out;
 }

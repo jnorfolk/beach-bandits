@@ -1,67 +1,12 @@
 import "../pages/index.css";
 import { routes } from "../utils/constants.js";
 import RouteItem from "../components/RouteItem.js";
+import Routes from "../components/Routes.js";
 
-let startingBeach = [];
-let endingBeach = [];
-let waypoints = [];
-let currentDropdownIndex = 0;
+const routesI = new Routes(routes, RouteItem);
+routesI.populateRouteList();
+routesI.populateRoute();
 
-function registerWaypoints(beachCoords) {
-  waypoints = beachCoords
-    .filter(
-      (beach) =>
-        beach.location !== startingBeach && beach.location !== endingBeach
-    )
-    .map((beach) => {
-      return {
-        location: beach.location,
-      };
-    });
-}
-
-function populateRoute() {
-  const startContainer = document.querySelector("#start-dropdown");
-  getCurrentRoute(startContainer);
-
-  startContainer.addEventListener("change", () => {
-    getCurrentRoute(startContainer);
-    populateRoutes();
-  });
-}
-populateRoute();
-
-function getCurrentRoute(startContainer) {
-  currentDropdownIndex = startContainer.selectedIndex;
-  const beachCoords = routes[0][currentDropdownIndex].coordinates.map(
-    (beach) => {
-      return {
-        location: { lat: beach[0], lng: beach[1] },
-      };
-    }
-  );
-  startingBeach = beachCoords[0].location;
-  endingBeach = beachCoords[beachCoords.length - 1].location;
-  registerWaypoints(beachCoords);
-}
-
-function populateRoutes() {
-  const routeList = document.querySelector(".routes__list");
-  while (routeList.querySelector(".routes__list-item")) {
-    routeList.removeChild(routeList.querySelector(".routes__list-item"));
-  } //clear old routes
-  const routeCreator = new RouteItem("#routes");
-  let routeCounter = 0x0041; //start lettering at A
-  routes[0][currentDropdownIndex].optimal_route_sequence.forEach((route) => {
-    const uniChar = String.fromCharCode(routeCounter);
-    routeList.append(routeCreator.generateRouteItem(route, uniChar));
-    routeCounter++;
-  });
-}
-populateRoutes();
-
-//
-//
 // google maps api
 function initMap() {
   const directionsService = new google.maps.DirectionsService();
@@ -88,9 +33,9 @@ function initMap() {
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
   directionsService
     .route({
-      origin: startingBeach,
-      destination: endingBeach,
-      waypoints: waypoints,
+      origin: routesI.getVariables().start,
+      destination: routesI.getVariables().end,
+      waypoints: routesI.getVariables().waypoints,
       travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {
