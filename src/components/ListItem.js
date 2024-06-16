@@ -1,6 +1,6 @@
 export default class ListItem {
-  constructor(listId) {
-    this._id = listId;
+  constructor(templateId) {
+    this._id = templateId;
   }
 
   generateListItem(beach) {
@@ -9,6 +9,16 @@ export default class ListItem {
       .content.querySelector(".selection__dropdown-option")
       .cloneNode(true);
     this._listElement.textContent = beach.NAME;
+
+    return this._listElement;
+  }
+
+  returnOption(beachRoutes) {
+    this._listElement = document
+      .querySelector(this._id)
+      .content.querySelector(".selection__dropdown-option")
+      .cloneNode(true);
+    this._listElement.textContent = beachRoutes[0];
 
     return this._listElement;
   }

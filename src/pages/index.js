@@ -1,22 +1,20 @@
 import "../pages/index.css";
-import beaches from "../utils/beaches.json";
+import beaches from "../utils/beachesv2.json";
 import ListItem from "../components/ListItem.js";
+import RouteItem from "../components/RouteItem.js";
 
-const beachesSplit = beaches.map((beach) => {
-  const split = beach.coordinates.split(", ");
+const beachCoords = beaches.coordinates.map((beach) => {
   return {
-    name: beach.NAME,
-    location: { lat: parseFloat(split[0]), lng: parseFloat(split[1]) },
+    location: { lat: beach[0], lng: beach[1] },
   };
 });
 
-let startingBeach = beachesSplit[0].location;
-let endingBeach = beachesSplit[1].location;
+let startingBeach = beachCoords[0].location;
+let endingBeach = beachCoords[beachCoords.length - 1].location;
 let waypoints = [];
-let waypointCounter = 0;
 
 function registerWaypoints() {
-  waypoints = beachesSplit
+  waypoints = beachCoords
     .filter(
       (beach) =>
         beach.location !== startingBeach && beach.location !== endingBeach
@@ -26,20 +24,19 @@ function registerWaypoints() {
         location: beach.location,
       };
     });
-  console.log(waypoints);
 }
 
 registerWaypoints();
 
 function populateDropdownLists() {
   const startContainer = document.querySelector("#start-dropdown");
-  const endContainer = document.querySelector("#end-dropdown");
   const listCreator = new ListItem("#start-list");
-  beaches.forEach((beach) => {
-    startContainer.append(listCreator.generateListItem(beach));
-    endContainer.append(listCreator.generateListItem(beach));
-  });
-  endContainer.selectedIndex = 1;
+  //   beachCoords.forEach((beach) => {
+  //     startContainer.append(listCreator.generateListItem(beach));
+  //   });
+  startContainer.append(
+    listCreator.returnOption(beaches.optimal_route_sequence)
+  );
 
   startContainer.addEventListener("change", () => {
     const currentIndexName =
@@ -51,25 +48,27 @@ function populateDropdownLists() {
     console.log(startingBeach);
     registerWaypoints();
   });
-  endContainer.addEventListener("change", () => {
-    const currentIndexName =
-      endContainer[endContainer.selectedIndex].textContent;
-    const matchingBeach = beachesSplit.find(
-      (beach) => beach.name === currentIndexName
-    );
-    endingBeach = matchingBeach.location;
-    console.log(endingBeach);
-    registerWaypoints();
-  });
 }
 populateDropdownLists();
+
+function populateRoutes() {
+  const routeList = document.querySelector(".routes__list");
+  const routeCreator = new RouteItem("#routes");
+  let routeCounter = 0x0041; //start lettering at A
+  beaches.optimal_route_sequence.forEach((route) => {
+    const uniChar = String.fromCharCode(routeCounter);
+    routeList.append(routeCreator.generateRouteItem(route, uniChar));
+    routeCounter++;
+  });
+}
+populateRoutes();
 
 // google maps api
 function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
 
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.querySelector("#map"), {
     zoom: 6,
     center: { lat: 28.18, lng: -81.6 },
   });
@@ -83,9 +82,8 @@ function initMap() {
   document
     .getElementById("start-dropdown")
     .addEventListener("change", onChangeHandler);
-  document
-    .getElementById("end-dropdown")
-    .addEventListener("change", onChangeHandler);
+
+  calculateAndDisplayRoute(directionsService, directionsRenderer);
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
@@ -93,8 +91,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     .route({
       origin: startingBeach,
       destination: endingBeach,
-
-      optimizeWaypoints: true,
+      waypoints: waypoints,
       travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {

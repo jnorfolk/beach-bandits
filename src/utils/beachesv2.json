@@ -1,0 +1,30 @@
+{
+  "optimal_route_sequence": [
+    "HANNA PARK",
+    "PONTE VEDRA N",
+    "PONTE VEDRA S",
+    "S COUNTY BCHS",
+    "L TALBOT ISL SP",
+    "ST VINCENT NWR",
+    "DOG ISL",
+    "ST GEO ISL SP",
+    "ST GEO ISL",
+    "FT CLINCH SP"
+  ],
+  "distances_between_beaches": [
+    9.1, 15.42, 36.43, 0.41, 9.43, 8.89, 0.05, 1.6, 21.0
+  ],
+  "total_distance": 102.33,
+  "coordinates": [
+    [30.3709553, -81.4028428],
+    [30.2396865, -81.3856384],
+    [30.0224671, -81.3236866],
+    [30.4686, -81.650746],
+    [30.474452, -81.65222],
+    [30.573019, -81.542569],
+    [30.678079, -81.456019],
+    [30.677999, -81.455209],
+    [30.685597, -81.429754],
+    [30.61058, -81.77142]
+  ]
+}

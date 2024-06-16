@@ -1,18 +1,39 @@
 .routes {
-  margin-top: 50px;
-  color: lightgreen;
-  display: none;
+  display: flex;
+  gap: 30px;
+  max-height: 1000px;
 }
 
-.routes_visible {
-  display: block;
-}
-
-.routes__title {
-  margin: 0;
+.routes__map {
+  width: 70%;
+  height: 1px + 100%;
+  border: 8px lightcoral solid;
+  border-radius: 15px;
 }
 
 .routes__list {
+  margin: 0;
   padding: 0;
-  list-style: none;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.routes__text-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.routes__title {
+  text-align: center;
+  width: 40px;
+  margin: 0;
+  color: lightgreen;
+  font-size: 56px;
+}
+
+.routes__subtitle {
+  margin: 0;
+  color: lightcoral;
+  font-size: 24px;
 }
