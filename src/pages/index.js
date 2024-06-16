@@ -1,26 +1,65 @@
 import "../pages/index.css";
-import data from "../utils/data.json";
+import beaches from "../utils/beaches.json";
 import ListItem from "../components/ListItem.js";
 
-let startingBeach = data.beaches[0].address;
-let endingBeach = data.beaches[1].address;
+const beachesSplit = beaches.map((beach) => {
+  const split = beach.coordinates.split(", ");
+  return {
+    name: beach.NAME,
+    location: { lat: parseFloat(split[0]), lng: parseFloat(split[1]) },
+  };
+});
+
+let startingBeach = beachesSplit[0].location;
+let endingBeach = beachesSplit[1].location;
+let waypoints = [];
+let waypointCounter = 0;
+
+function registerWaypoints() {
+  waypoints = beachesSplit
+    .filter(
+      (beach) =>
+        beach.location !== startingBeach && beach.location !== endingBeach
+    )
+    .map((beach) => {
+      return {
+        location: beach.location,
+      };
+    });
+  console.log(waypoints);
+}
+
+registerWaypoints();
 
 function populateDropdownLists() {
   const startContainer = document.querySelector("#start-dropdown");
   const endContainer = document.querySelector("#end-dropdown");
   const listCreator = new ListItem("#start-list");
-  data.beaches.forEach((beach) => {
+  beaches.forEach((beach) => {
     startContainer.append(listCreator.generateListItem(beach));
     endContainer.append(listCreator.generateListItem(beach));
   });
+  endContainer.selectedIndex = 1;
 
   startContainer.addEventListener("change", () => {
-    const listIndex = startContainer.selectedIndex;
-    startingBeach = startContainer[listIndex].textContent;
+    const currentIndexName =
+      startContainer[startContainer.selectedIndex].textContent;
+    const matchingBeach = beachesSplit.find(
+      (beach) => beach.name === currentIndexName
+    );
+    startingBeach = matchingBeach.location;
+    console.log(startingBeach);
+    registerWaypoints();
   });
   endContainer.addEventListener("change", () => {
-    const listIndex = endContainer.selectedIndex;
-    endingBeach = endContainer[listIndex].textContent;
+    const currentIndexName =
+      endContainer[endContainer.selectedIndex].textContent;
+    const matchingBeach = beachesSplit.find(
+      (beach) => beach.name === currentIndexName
+    );
+    endingBeach = matchingBeach.location;
+    console.log(endingBeach);
+    registerWaypoints();
   });
 }
 populateDropdownLists();
@@ -54,7 +93,8 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     .route({
       origin: startingBeach,
       destination: endingBeach,
-      waypoints: [],
+
+      optimizeWaypoints: true,
       travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {

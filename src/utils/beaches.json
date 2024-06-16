@@ -1,0 +1,38 @@
+[
+  {
+    "": 9,
+    "COUNTY": "BREVARD",
+    "NAME": "CANAVERAL NS",
+    "coordinates": "28.4513556, -80.5283059"
+  },
+  {
+    "": 10,
+    "COUNTY": "INDIAN RIVER",
+    "NAME": "WABASSO BCH",
+    "coordinates": "27.7642808, -80.3979434"
+  },
+  {
+    "": 11,
+    "COUNTY": "PINELLAS",
+    "NAME": "MID COUNTY BCHS",
+    "coordinates": "27.90268, -82.73955"
+  },
+  {
+    "": 12,
+    "COUNTY": "PINELLAS",
+    "NAME": "FT DESOTO CO PK",
+    "coordinates": "27.6361828, -82.7172873"
+  },
+  {
+    "": 13,
+    "COUNTY": "SARASOTA",
+    "NAME": "CASEY KEY",
+    "coordinates": "27.1500534, -82.4806525"
+  },
+  {
+    "": 14,
+    "COUNTY": "PALM BEACH",
+    "NAME": "CORAL COVE PARK",
+    "coordinates": "26.9605829, -80.0781245"
+  }
+]

@@ -1,0 +1,648 @@
+  {
+    "": 9,
+    "COUNTY": "BREVARD",
+    "NAME": "CANAVERAL NS",
+    "coordinates": "(28.4513556, -80.5283059)"
+  },
+  {
+    "": 10,
+    "COUNTY": "INDIAN RIVER",
+    "NAME": "WABASSO BCH",
+    "coordinates": "(27.7642808, -80.3979434)"
+  },
+  {
+    "": 11,
+    "COUNTY": "PINELLAS",
+    "NAME": "MID COUNTY BCHS",
+    "coordinates": "(27.90268, -82.73955)"
+  },
+  {
+    "": 12,
+    "COUNTY": "PINELLAS",
+    "NAME": "FT DESOTO CO PK",
+    "coordinates": "(27.6361828, -82.7172873)"
+  },
+  {
+    "": 13,
+    "COUNTY": "SARASOTA",
+    "NAME": "CASEY KEY",
+    "coordinates": "(27.1500534, -82.4806525)"
+  },
+  {
+    "": 14,
+    "COUNTY": "PALM BEACH",
+    "NAME": "CORAL COVE PARK",
+    "coordinates": "(26.9605829, -80.0781245)"
+  },
+  {
+    "": 15,
+    "COUNTY": "PALM BEACH",
+    "NAME": "TEQUESTA BCHS",
+    "coordinates": "(26.782194, -80.035116)"
+  },
+  {
+    "": 16,
+    "COUNTY": "PALM BEACH",
+    "NAME": "OCEAN REEF PARK",
+    "coordinates": "(26.7936633, -80.0332519)"
+  },
+  {
+    "": 17,
+    "COUNTY": "PALM BEACH",
+    "NAME": "LANTANA",
+    "coordinates": "(26.5865308, -80.052166)"
+  },
+  {
+    "": 18,
+    "COUNTY": "PALM BEACH",
+    "NAME": "MANALAPAN",
+    "coordinates": "(26.5692364, -80.0447635)"
+  },
+  {
+    "": 19,
+    "COUNTY": "PALM BEACH",
+    "NAME": "OCEAN INLET PARK",
+    "coordinates": "(26.544511, -80.0437845)"
+  },
+  {
+    "": 20,
+    "COUNTY": "LEE",
+    "NAME": "GASPARILLA ISLAND",
+    "coordinates": "(26.772291, -82.2662057)"
+  },
+  {
+    "": 21,
+    "COUNTY": "COLLIER",
+    "NAME": "WIGGINS PASS SRA",
+    "coordinates": "(28.581239, -81.328248)"
+  },
+  {
+    "": 22,
+    "COUNTY": "DADE",
+    "NAME": "MIAMI BCHS",
+    "coordinates": "(27.637003, -81.832431)"
+  },
+  {
+    "": 23,
+    "COUNTY": "DADE",
+    "NAME": "VIRGINIA KEY",
+    "coordinates": "(25.7449289, -80.1458679)"
+  },
+  {
+    "": 24,
+    "COUNTY": "MONROE",
+    "NAME": "KEY WEST BCHS",
+    "coordinates": "(25.55731, -80.91705)"
+  },
+  {
+    "": 26,
+    "COUNTY": "MONROE",
+    "NAME": "MARQUESAS KEYS",
+    "coordinates": "(24.5778787, -82.1084366)"
+  },
+  {
+    "": 27,
+    "COUNTY": "MONROE",
+    "NAME": "GARDEN KEY",
+    "coordinates": "(24.62849, -82.87318)"
+  },
+  {
+    "": 28,
+    "COUNTY": "BAY",
+    "NAME": "TYNDALL AFB",
+    "coordinates": "(30.0691172, -85.5772755)"
+  },
+  {
+    "": 29,
+    "COUNTY": "DUVAL",
+    "NAME": "L TALBOT ISL SP",
+    "coordinates": "(30.474452, -81.65222)"
+  },
+  {
+    "": 31,
+    "COUNTY": "ESCAMBIA",
+    "NAME": "PERDIDO KEY",
+    "coordinates": "(30.3180487, -87.4259275)"
+  },
+  {
+    "": 33,
+    "COUNTY": "PALM BEACH",
+    "NAME": "UNKNOWN",
+    "coordinates": "(26.757872, -80.036852)"
+  },
+  {
+    "": 34,
+    "COUNTY": "NASSAU",
+    "NAME": "FT CLINCH SP",
+    "coordinates": "(30.61058, -81.77142)"
+  },
+  {
+    "": 35,
+    "COUNTY": "PALM BEACH",
+    "NAME": "PALM BCHS",
+    "coordinates": "(26.789809, -80.052072)"
+  },
+  {
+    "": 36,
+    "COUNTY": "ESCAMBIA",
+    "NAME": "GULF ISL NS",
+    "coordinates": "(30.415706, -87.276054)"
+  },
+  {
+    "": 37,
+    "COUNTY": "DUVAL",
+    "NAME": "S COUNTY BCHS",
+    "coordinates": "(30.4686, -81.650746)"
+  },
+  {
+    "": 39,
+    "COUNTY": "ST JOHNS",
+    "NAME": "PONTE VEDRA N",
+    "coordinates": "(30.2396865, -81.3856384)"
+  },
+  {
+    "": 40,
+    "COUNTY": "BROWARD",
+    "NAME": "BROWARD CO BCHS",
+    "coordinates": "(26.621188, -80.124153)"
+  },
+  {
+    "": 41,
+    "COUNTY": "ST JOHNS",
+    "NAME": "PONTE VEDRA S",
+    "coordinates": "(30.0224671, -81.3236866)"
+  },
+  {
+    "": 42,
+    "COUNTY": "OKALOOSA",
+    "NAME": "EGLIN AFB",
+    "coordinates": "(30.461382, -86.5468344)"
+  },
+  {
+    "": 43,
+    "COUNTY": "OKALOOSA",
+    "NAME": "HENDERSON SRA",
+    "coordinates": "(30.66503, -86.59218)"
+  },
+  {
+    "": 44,
+    "COUNTY": "WALTON",
+    "NAME": "COUNTY BCHS E",
+    "coordinates": "(26.50033, -80.053835)"
+  },
+  {
+    "": 45,
+    "COUNTY": "WALTON",
+    "NAME": "TOPSAIL SRA",
+    "coordinates": "(26.500522, -80.053839)"
+  },
+  {
+    "": 46,
+    "COUNTY": "WALTON",
+    "NAME": "GRAYTON BCH",
+    "coordinates": "(30.3320215, -86.1676653)"
+  },
+  {
+    "": 47,
+    "COUNTY": "BAY",
+    "NAME": "ST ANDREWS SRA",
+    "coordinates": "(30.23765, -85.63262)"
+  },
+  {
+    "": 49,
+    "COUNTY": "FRANKLIN",
+    "NAME": "ST VINCENT NWR",
+    "coordinates": "(30.573019, -81.542569)"
+  },
+  {
+    "": 50,
+    "COUNTY": "GULF",
+    "NAME": "MEXICO BCH",
+    "coordinates": "(26.956239, -80.077173)"
+  },
+  {
+    "": 51,
+    "COUNTY": "FLAGLER",
+    "NAME": "WASHINGTON OAKS",
+    "coordinates": "(29.6355286, -81.2039528)"
+  },
+  {
+    "": 52,
+    "COUNTY": "COLLIER",
+    "NAME": "10000 ISLS NWR",
+    "coordinates": "(26.09924, -81.38097)"
+  },
+  {
+    "": 53,
+    "COUNTY": "COLLIER",
+    "NAME": "CP ROMANO",
+    "coordinates": "(28.663912, -81.509357)"
+  },
+  {
+    "": 55,
+    "COUNTY": "GULF",
+    "NAME": "CAPE SAN BLAS",
+    "coordinates": "(29.6855511, -85.3687032)"
+  },
+  {
+    "": 56,
+    "COUNTY": "FRANKLIN",
+    "NAME": "ST GEO ISL SP",
+    "coordinates": "(30.677999, -81.455209)"
+  },
+  {
+    "": 59,
+    "COUNTY": "FRANKLIN",
+    "NAME": "DOG ISL",
+    "coordinates": "(30.678079, -81.456019)"
+  },
+  {
+    "": 60,
+    "COUNTY": "FRANKLIN",
+    "NAME": "ST GEO ISL",
+    "coordinates": "(30.685597, -81.429754)"
+  },
+  {
+    "": 61,
+    "COUNTY": "VOLUSIA",
+    "NAME": "VOLUSIA CO BCHS",
+    "coordinates": "(29.06345, -81.14857)"
+  },
+  {
+    "": 64,
+    "COUNTY": "BREVARD",
+    "NAME": "MERRITT ISL NWR",
+    "coordinates": "(28.30031, -80.70121)"
+  },
+  {
+    "": 66,
+    "COUNTY": "MONROE",
+    "NAME": "GRASSY KEY (ATL)",
+    "coordinates": "(24.61764, -81.72731)"
+  },
+  {
+    "": 67,
+    "COUNTY": "BREVARD",
+    "NAME": "JETTY PARK",
+    "coordinates": "(28.4065705, -80.5940147)"
+  },
+  {
+    "": 68,
+    "COUNTY": "BREVARD",
+    "NAME": "PATRICK AFB",
+    "coordinates": "(28.23809, -80.6079)"
+  },
+  {
+    "": 73,
+    "COUNTY": "INDIAN RIVER",
+    "NAME": "SEB INLET SRA",
+    "coordinates": "(28.581365, -80.815861)"
+  },
+  {
+    "": 74,
+    "COUNTY": "INDIAN RIVER",
+    "NAME": "WABASSO BCH S",
+    "coordinates": "(27.7577335, -80.3984955)"
+  },
+  {
+    "": 76,
+    "COUNTY": "INDIAN RIVER",
+    "NAME": "VERO BCH",
+    "coordinates": "(27.6387163, -80.3975399)"
+  },
+  {
+    "": 78,
+    "COUNTY": "PINELLAS",
+    "NAME": "ST PETE BCH",
+    "coordinates": "(27.7329538, -82.746469)"
+  },
+  {
+    "": 80,
+    "COUNTY": "MONROE",
+    "NAME": "BOOT KEY",
+    "coordinates": "(24.6970864, -81.0997956)"
+  },
+  {
+    "": 81,
+    "COUNTY": "HILLSBOROUGH",
+    "NAME": "EGMONT KEY",
+    "coordinates": "(27.5895046, -82.7620515)"
+  },
+  {
+    "": 82,
+    "COUNTY": "SARASOTA",
+    "NAME": "VENICE BCHS",
+    "coordinates": "(27.283566, -82.558122)"
+  },
+  {
+    "": 83,
+    "COUNTY": "SARASOTA",
+    "NAME": "LONGBOAT KEY S",
+    "coordinates": "(27.3605496, -82.6181348)"
+  },
+  {
+    "": 86,
+    "COUNTY": "MANATEE",
+    "NAME": "LONGBOAT KEY N",
+    "coordinates": "(27.4125417, -82.6589881)"
+  },
+  {
+    "": 87,
+    "COUNTY": "MARTIN",
+    "NAME": "HUTCHINSON ISL",
+    "coordinates": "(30.441938, -84.27707)"
+  },
+  {
+    "": 88,
+    "COUNTY": "MARTIN",
+    "NAME": "ST LUCIE ILT SP",
+    "coordinates": "(30.418307, -84.276096)"
+  },
+  {
+    "": 90,
+    "COUNTY": "PALM BEACH",
+    "NAME": "SINGER ISL S",
+    "coordinates": "(26.64757, -80.43651)"
+  },
+  {
+    "": 91,
+    "COUNTY": "MONROE",
+    "NAME": "W SUMMERLAND KEY",
+    "coordinates": "(24.6656987, -81.4423048)"
+  },
+  {
+    "": 93,
+    "COUNTY": "SARASOTA",
+    "NAME": "LIDO KEY",
+    "coordinates": "(27.3169907, -82.5814872)"
+  },
+  {
+    "": 94,
+    "COUNTY": "SARASOTA",
+    "NAME": "SIESTA KEY",
+    "coordinates": "(27.275596, -82.5561627)"
+  },
+  {
+    "": 95,
+    "COUNTY": "PALM BEACH",
+    "NAME": "JUPITER BCH",
+    "coordinates": "(26.9342246, -80.0942087)"
+  },
+  {
+    "": 96,
+    "COUNTY": "PALM BEACH",
+    "NAME": "JUNO/JUPITER BCH",
+    "coordinates": "(26.8758154, -80.0509923)"
+  },
+  {
+    "": 97,
+    "COUNTY": "PALM BEACH",
+    "NAME": "MACARTHUR SP",
+    "coordinates": "(26.782062, -80.037063)"
+  },
+  {
+    "": 98,
+    "COUNTY": "PALM BEACH",
+    "NAME": "SINGER ISLAND",
+    "coordinates": "(26.7850625, -80.0375408)"
+  },
+  {
+    "": 99,
+    "COUNTY": "MONROE",
+    "NAME": "HOSPITAL KEY",
+    "coordinates": "(24.6480849, -82.8530326)"
+  },
+  {
+    "": 100,
+    "COUNTY": "PALM BEACH",
+    "NAME": "TOWN OF PALM BCH",
+    "coordinates": "(26.7186762, -80.05476)"
+  },
+  {
+    "": 101,
+    "COUNTY": "PALM BEACH",
+    "NAME": "KREUSLER PARK",
+    "coordinates": "(26.6166458, -80.037219)"
+  },
+  {
+    "": 102,
+    "COUNTY": "MONROE",
+    "NAME": "MATECUMBE LOWER",
+    "coordinates": "(24.862635, -80.7172868)"
+  },
+  {
+    "": 103,
+    "COUNTY": "CHARLOTTE",
+    "NAME": "MANASOTA KEY",
+    "coordinates": "(26.924124, -82.3600271)"
+  },
+  {
+    "": 104,
+    "COUNTY": "CHARLOTTE",
+    "NAME": "PT CHARLOTTE SRA",
+    "coordinates": "(26.89985, -81.95031)"
+  },
+  {
+    "": 110,
+    "COUNTY": "LEE",
+    "NAME": "GASPAR ISL SRA",
+    "coordinates": "(28.795334, -82.492301)"
+  },
+  {
+    "": 111,
+    "COUNTY": "LEE",
+    "NAME": "CAYO COSTA SP",
+    "coordinates": "(26.6854363, -82.2580847)"
+  },
+  {
+    "": 112,
+    "COUNTY": "PALM BEACH",
+    "NAME": "HIGHLAND BCH",
+    "coordinates": "(26.3995204, -80.0655977)"
+  },
+  {
+    "": 115,
+    "COUNTY": "BROWARD",
+    "NAME": "JU LLOYD SRA",
+    "coordinates": "(26.171291, -80.152506)"
+  },
+  {
+    "": 116,
+    "COUNTY": "LEE",
+    "NAME": "BONITA BCH",
+    "coordinates": "(26.4567825, -81.9562481)"
+  },
+  {
+    "": 117,
+    "COUNTY": "COLLIER",
+    "NAME": "BAREFOOT BCH PR",
+    "coordinates": "(26.3288, -81.8437)"
+  },
+  {
+    "": 118,
+    "COUNTY": "COLLIER",
+    "NAME": "CLAM PASS PARK",
+    "coordinates": "(26.2112185, -81.8112534)"
+  },
+  {
+    "": 119,
+    "COUNTY": "LEE",
+    "NAME": "SANIBEL ISL E",
+    "coordinates": "(28.868826, -82.488194)"
+  },
+  {
+    "": 120,
+    "COUNTY": "COLLIER",
+    "NAME": "PARKSHORE BCH",
+    "coordinates": "(28.789005, -81.139754)"
+  },
+  {
+    "": 121,
+    "COUNTY": "COLLIER",
+    "NAME": "NAPLES BCH S",
+    "coordinates": "(26.1314483, -81.8089038)"
+  },
+  {
+    "": 122,
+    "COUNTY": "COLLIER",
+    "NAME": "KEEWAYDIN ISL N",
+    "coordinates": "(28.822134, -81.341684)"
+  },
+  {
+    "": 124,
+    "COUNTY": "DADE",
+    "NAME": "KEY BISCAYNE",
+    "coordinates": "(25.6968351, -80.1635261)"
+  },
+  {
+    "": 125,
+    "COUNTY": "DADE",
+    "NAME": "CP FLORIDA SRA",
+    "coordinates": "(27.629864, -81.820501)"
+  },
+  {
+    "": 126,
+    "COUNTY": "COLLIER",
+    "NAME": "MARCO ISL",
+    "coordinates": "(28.758728, -81.310507)"
+  },
+  {
+    "": 129,
+    "COUNTY": "MONROE",
+    "NAME": "BIG PINE KEY",
+    "coordinates": "(24.6698652, -81.353969)"
+  },
+  {
+    "": 131,
+    "COUNTY": "MONROE",
+    "NAME": "ENP (E CAPE CANAL-",
+    "coordinates": "(25.14235, -81.06619)"
+  },
+  {
+    "": 132,
+    "COUNTY": "MONROE",
+    "NAME": "MATECUMBE UPPER",
+    "coordinates": "(24.9142998, -80.6381183)"
+  },
+  {
+    "": 133,
+    "COUNTY": "MONROE",
+    "NAME": "LONG KEY",
+    "coordinates": "(24.819859, -80.821734)"
+  },
+  {
+    "": 134,
+    "COUNTY": "MONROE",
+    "NAME": "EAST KEY",
+    "coordinates": "(24.9992967, -80.6089518)"
+  },
+  {
+    "": 135,
+    "COUNTY": "MONROE",
+    "NAME": "LOGGERHEAD KEY",
+    "coordinates": "(24.63294, -82.92085)"
+  },
+  {
+    "": 136,
+    "COUNTY": "MONROE",
+    "NAME": "BUSH KEY/LONG KEY",
+    "coordinates": "(24.81986, -80.82173)"
+  },
+  {
+    "": 138,
+    "COUNTY": "ESCAMBIA",
+    "NAME": "PERDIDO KEY SRA",
+    "coordinates": "(30.317382, -87.424864)"
+  },
+  {
+    "": 141,
+    "COUNTY": "ST LUCIE",
+    "NAME": "N COUNTY BCHS",
+    "coordinates": "(30.684787, -81.921757)"
+  },
+  {
+    "": 142,
+    "COUNTY": "MANATEE",
+    "NAME": "ANNA MARIA ISL",
+    "coordinates": "(28.098616, -82.585586)"
+  },
+  {
+    "": 143,
+    "COUNTY": "ST LUCIE",
+    "NAME": "FT PRCE ILT SRA",
+    "coordinates": "(30.722429, -81.777459)"
+  },
+  {
+    "": 145,
+    "COUNTY": "MONROE",
+    "NAME": "FAT DEER KEY",
+    "coordinates": "(24.73875, -81.00202)"
+  },
+  {
+    "": 146,
+    "COUNTY": "MONROE",
+    "NAME": "KEY COLONY BCH",
+    "coordinates": "(24.7211202, -81.0174537)"
+  },
+  {
+    "": 148,
+    "COUNTY": "PALM BEACH",
+    "NAME": "BOYNTON BCH",
+    "coordinates": "(26.5256179, -80.0666026)"
+  },
+  {
+    "": 149,
+    "COUNTY": "MONROE",
+    "NAME": "BOCA GRANDE KEY",
+    "coordinates": "(24.5326552, -82.0070462)"
+  },
+  {
+    "": 150,
+    "COUNTY": "MONROE",
+    "NAME": "WOMAN KEY",
+    "coordinates": "(24.525365, -81.9731071)"
+  },
+  {
+    "": 151,
+    "COUNTY": "PALM BEACH",
+    "NAME": "GULFSTREAM PARK",
+    "coordinates": "(26.5047942, -80.0514305)"
+  },
+  {
+    "": 152,
+    "COUNTY": "PALM BEACH",
+    "NAME": "DELRAY BCH",
+    "coordinates": "(26.4614625, -80.0728201)"
+  },
+  {
+    "": 154,
+    "COUNTY": "DADE",
+    "NAME": "GOLDEN BCH",
+    "coordinates": "(25.9650919, -80.1222671)"
+  },
+  {
+    "": 156,
+    "COUNTY": "MONROE",
+    "NAME": "LITTLE CRAWL KEY",
+    "coordinates": "(24.7428671, -80.9832667)"
+  }
