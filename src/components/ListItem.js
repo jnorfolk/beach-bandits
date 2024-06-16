@@ -8,7 +8,7 @@ export default class ListItem {
       .querySelector(this._id)
       .content.querySelector(".selection__dropdown-option")
       .cloneNode(true);
-    this._listElement.textContent = beach.address;
+    this._listElement.textContent = beach.name;
 
     return this._listElement;
   }

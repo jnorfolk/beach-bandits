@@ -31,8 +31,8 @@ function initMap() {
   const directionsRenderer = new google.maps.DirectionsRenderer();
 
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 7,
-    center: { lat: 41.85, lng: -87.65 },
+    zoom: 6,
+    center: { lat: 28.18, lng: -81.6 },
   });
 
   directionsRenderer.setMap(map);
@@ -54,6 +54,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     .route({
       origin: startingBeach,
       destination: endingBeach,
+      waypoints: [],
       travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {

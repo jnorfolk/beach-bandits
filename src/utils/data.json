@@ -17,6 +17,24 @@
       "address": "400 Benjamin Franklin Drive, Sarasota, FL 34236",
       "latitude": 27.311745,
       "longitude": -82.576569
+    },
+    {
+      "name": "West Palm Beach",
+      "address": "West Palm Beach, FL",
+      "latitude": 26.721921,
+      "longitude": -80.078243
+    },
+    {
+      "name": "Daytona Beach",
+      "address": "Daytona Beach, FL",
+      "latitude": 29.198068,
+      "longitude": -81.02719
+    },
+    {
+      "name": "Panama City Beach",
+      "address": "Panama City Beach, FL",
+      "latitude": 30.18572,
+      "longitude": -85.804853
     }
   ]
 }
