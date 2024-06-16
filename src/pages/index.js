@@ -1,47 +1,31 @@
 import "../pages/index.css";
 import data from "../utils/data.json";
+import ListItem from "../components/ListItem.js";
 
-const lat1 = data.beaches[2].latitude;
-const long1 = data.beaches[2].longitude;
-const lat2 = data.beaches[1].latitude;
-const long2 = data.beaches[1].longitude;
+let startingBeach = data.beaches[0].address;
+let endingBeach = data.beaches[1].address;
 
-function haversine(lat1, lon1, lat2, lon2) {
-  // Convert latitude and longitude from degrees to radians
-  lat1 = toRadians(lat1);
-  lon1 = toRadians(lon1);
-  lat2 = toRadians(lat2);
-  lon2 = toRadians(lon2);
+function populateDropdownLists() {
+  const startContainer = document.querySelector("#start-dropdown");
+  const endContainer = document.querySelector("#end-dropdown");
+  const listCreator = new ListItem("#start-list");
+  data.beaches.forEach((beach) => {
+    startContainer.append(listCreator.generateListItem(beach));
+    endContainer.append(listCreator.generateListItem(beach));
+  });
 
-  // Differences in coordinates
-  const dlat = lat2 - lat1;
-  const dlon = lon2 - lon1;
-
-  // Haversine formula
-  const a =
-    Math.sin(dlat / 2) * Math.sin(dlat / 2) +
-    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) * Math.sin(dlon / 2);
-
-  const c = 2 * Math.asin(Math.sqrt(a));
-  const r = 3956; // Radius of Earth in miles
-
-  const distance = c * r;
-  return `${Math.floor(distance)} miles`;
+  startContainer.addEventListener("change", () => {
+    const listIndex = startContainer.selectedIndex;
+    startingBeach = startContainer[listIndex].textContent;
+  });
+  endContainer.addEventListener("change", () => {
+    const listIndex = endContainer.selectedIndex;
+    endingBeach = endContainer[listIndex].textContent;
+  });
 }
+populateDropdownLists();
 
-function toRadians(degrees) {
-  return degrees * (Math.PI / 180);
-}
-
-//
-
-// fetch(
-//   "https://api.geoapify.com/v1/routing?waypoints=25.788158,-80.129423|26.783238,-80.041613|27.311745,-82.576569&mode=drive&apiKey=12e0d4245d144d2e86f962a7a272fca8"
-// )
-//   .then((response) => response.json())
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log("error", error));
-
+// google maps api
 function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -57,23 +41,19 @@ function initMap() {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
   };
 
-  document.getElementById("start").addEventListener("change", onChangeHandler);
-  document.getElementById("end").addEventListener("change", onChangeHandler);
+  document
+    .getElementById("start-dropdown")
+    .addEventListener("change", onChangeHandler);
+  document
+    .getElementById("end-dropdown")
+    .addEventListener("change", onChangeHandler);
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-  const miami = new google.maps.LatLng(25.788158, -80.129423);
-  const philFoster = new google.maps.LatLng(26.783238, -80.041613);
-  const lido = new google.maps.LatLng(27.311745, -82.576569);
   directionsService
     .route({
-      origin: miami,
-      destination: lido,
-      waypoints: [
-        {
-          location: philFoster,
-        },
-      ],
+      origin: startingBeach,
+      destination: endingBeach,
       travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {

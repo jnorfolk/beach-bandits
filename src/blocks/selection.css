@@ -15,7 +15,8 @@
 
 .selection__dropdown {
   min-width: 300px;
-  min-height: 40px;
+  align-self: center;
+  height: 40px;
   font-size: 20px;
   border-radius: 10px;
   border-color: black;
@@ -30,6 +31,16 @@
 
 .selection__dropdown-option {
   background-color: coral;
+}
+
+.selection__items-container {
+  display: flex;
+  gap: 10px;
+}
+
+.selection__label-text {
+  color: lightcoral;
+  font-size: 20px;
 }
 
 .selection__submit-button {
@@ -47,4 +58,27 @@
 
 .selection__submit-button:hover {
   background-color: coral;
+}
+
+@media screen and (max-width: 1300px) {
+  .selection__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .selection__dropdown {
+    font-size: 16px;
+  }
+
+  .selection__items-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selection__label-text {
+    margin: 0;
+  }
 }
