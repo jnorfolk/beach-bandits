@@ -1,16 +1,6 @@
 import "../pages/index.css";
 import { routes } from "../utils/constants.js";
-import hannaPark from "../routes/hanna-park.json";
-import ListItem from "../components/ListItem.js";
 import RouteItem from "../components/RouteItem.js";
-
-console.log(routes);
-
-// const beachCoords = hannaPark.coordinates.map((beach) => {
-//   return {
-//     location: { lat: beach[0], lng: beach[1] },
-//   };
-// });
 
 let startingBeach = [];
 let endingBeach = [];
@@ -29,7 +19,6 @@ function registerWaypoints(beachCoords) {
       };
     });
 }
-// registerWaypoints();
 
 function populateRoute() {
   const startContainer = document.querySelector("#start-dropdown");
@@ -60,7 +49,7 @@ function populateRoutes() {
   const routeList = document.querySelector(".routes__list");
   while (routeList.querySelector(".routes__list-item")) {
     routeList.removeChild(routeList.querySelector(".routes__list-item"));
-  }
+  } //clear old routes
   const routeCreator = new RouteItem("#routes");
   let routeCounter = 0x0041; //start lettering at A
   routes[0][currentDropdownIndex].optimal_route_sequence.forEach((route) => {
@@ -71,6 +60,8 @@ function populateRoutes() {
 }
 populateRoutes();
 
+//
+//
 // google maps api
 function initMap() {
   const directionsService = new google.maps.DirectionsService();
