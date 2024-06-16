@@ -22,6 +22,7 @@
   background-color: lightgreen;
   border-style: solid;
   border-width: 3px;
+  cursor: pointer;
 }
 
 .selection__dropdown:hover {
@@ -40,23 +41,6 @@
 .selection__label-text {
   color: lightcoral;
   font-size: 20px;
-}
-
-.selection__submit-button {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  width: 110px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: lightgreen;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 3px;
-}
-
-.selection__submit-button:hover {
-  background-color: coral;
 }
 
 @media screen and (max-width: 1300px) {

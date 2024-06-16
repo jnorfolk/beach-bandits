@@ -1,0 +1,30 @@
+{
+  "optimal_route_sequence": [
+    "HANNA PARK",
+    "ST GEO ISL",
+    "ST GEO ISL SP",
+    "DOG ISL",
+    "ST VINCENT NWR",
+    "PONTE VEDRA N",
+    "PONTE VEDRA S",
+    "ST AUG BCHS",
+    "WASHINGTON OAKS",
+    "COUNTY BCHS"
+  ],
+  "distances_between_beaches": [
+    21.73, 1.6, 0.05, 8.89, 24.8, 15.42, 9.19, 22.72, 11.51
+  ],
+  "total_distance": 115.9,
+  "coordinates": [
+    [30.3709553, -81.4028428],
+    [30.685597, -81.429754],
+    [30.677999, -81.455209],
+    [30.678079, -81.456019],
+    [30.573019, -81.542569],
+    [30.2396865, -81.3856384],
+    [30.0224671, -81.3236866],
+    [29.91218, -81.40989],
+    [29.6355286, -81.2039528],
+    [29.481089, -81.131149]
+  ]
+}

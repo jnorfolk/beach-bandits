@@ -1,0 +1,25 @@
+.footer {
+  padding-top: 100px;
+}
+.footer__text-wrapper {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  padding-left: 10px;
+  border-top: 5px lightcoral solid;
+  background: linear-gradient(to bottom, #f0808043, #f000);
+  border-radius: 15px;
+}
+
+.footer__text {
+  margin: 0;
+  color: rgba(144, 238, 144, 0.8);
+  font-size: 18px;
+}
+
+.footer__link {
+  color: lightcoral;
+  text-decoration: none;
+}

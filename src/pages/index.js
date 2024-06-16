@@ -1,19 +1,23 @@
 import "../pages/index.css";
-import beaches from "../utils/beachesv2.json";
+import { routes } from "../utils/constants.js";
+import hannaPark from "../routes/hanna-park.json";
 import ListItem from "../components/ListItem.js";
 import RouteItem from "../components/RouteItem.js";
 
-const beachCoords = beaches.coordinates.map((beach) => {
-  return {
-    location: { lat: beach[0], lng: beach[1] },
-  };
-});
+console.log(routes);
 
-let startingBeach = beachCoords[0].location;
-let endingBeach = beachCoords[beachCoords.length - 1].location;
+// const beachCoords = hannaPark.coordinates.map((beach) => {
+//   return {
+//     location: { lat: beach[0], lng: beach[1] },
+//   };
+// });
+
+let startingBeach = [];
+let endingBeach = [];
 let waypoints = [];
+let currentDropdownIndex = 0;
 
-function registerWaypoints() {
+function registerWaypoints(beachCoords) {
   waypoints = beachCoords
     .filter(
       (beach) =>
@@ -25,37 +29,41 @@ function registerWaypoints() {
       };
     });
 }
+// registerWaypoints();
 
-registerWaypoints();
-
-function populateDropdownLists() {
+function populateRoute() {
   const startContainer = document.querySelector("#start-dropdown");
-  const listCreator = new ListItem("#start-list");
-  //   beachCoords.forEach((beach) => {
-  //     startContainer.append(listCreator.generateListItem(beach));
-  //   });
-  startContainer.append(
-    listCreator.returnOption(beaches.optimal_route_sequence)
-  );
+  getCurrentRoute(startContainer);
 
   startContainer.addEventListener("change", () => {
-    const currentIndexName =
-      startContainer[startContainer.selectedIndex].textContent;
-    const matchingBeach = beachesSplit.find(
-      (beach) => beach.name === currentIndexName
-    );
-    startingBeach = matchingBeach.location;
-    console.log(startingBeach);
-    registerWaypoints();
+    getCurrentRoute(startContainer);
+    populateRoutes();
   });
 }
-populateDropdownLists();
+populateRoute();
+
+function getCurrentRoute(startContainer) {
+  currentDropdownIndex = startContainer.selectedIndex;
+  const beachCoords = routes[0][currentDropdownIndex].coordinates.map(
+    (beach) => {
+      return {
+        location: { lat: beach[0], lng: beach[1] },
+      };
+    }
+  );
+  startingBeach = beachCoords[0].location;
+  endingBeach = beachCoords[beachCoords.length - 1].location;
+  registerWaypoints(beachCoords);
+}
 
 function populateRoutes() {
   const routeList = document.querySelector(".routes__list");
+  while (routeList.querySelector(".routes__list-item")) {
+    routeList.removeChild(routeList.querySelector(".routes__list-item"));
+  }
   const routeCreator = new RouteItem("#routes");
   let routeCounter = 0x0041; //start lettering at A
-  beaches.optimal_route_sequence.forEach((route) => {
+  routes[0][currentDropdownIndex].optimal_route_sequence.forEach((route) => {
     const uniChar = String.fromCharCode(routeCounter);
     routeList.append(routeCreator.generateRouteItem(route, uniChar));
     routeCounter++;

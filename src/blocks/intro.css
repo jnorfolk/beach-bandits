@@ -1,5 +1,5 @@
 .intro__text-wrapper {
-  color: lightsalmon;
+  color: lightcoral;
 }
 
 .intro__subheading {
@@ -9,10 +9,9 @@
   border-width: 5px;
   border-left-style: solid;
   border-left-color: lightgreen;
-  opacity: 0.8;
 }
 
 .intro__paragraph-text {
   margin: 10px 0 0;
-  font-size: 18px;
+  font-size: 20px;
 }
