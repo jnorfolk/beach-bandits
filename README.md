@@ -1,14 +1,14 @@
 # Beach Bandits
 
 Beach Bandits is a tool that allows you to create an optimal route between selected beaches in Florida.
-This project was created for the June 2024 TripleTen Code Jam, based around creating an efficient route for traveling to different beaches.
+This project was created for the June 2024 TripleTen Code Jam. 
 
 ### Front-end technologies used:
 
 - HTML
 - CSS
 - Webpack
-- Git and Github Pages
+- Github Pages
 - Google Maps API
 
 ### View the project here:
