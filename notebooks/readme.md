@@ -1,3 +1,6 @@
+# How to use
+Download the files updated_beaches.csv and model.py into the same folder. Running model.py will import this file and perform the necessary preprocessing and calculations. It will ask the user to input the name of a starting beach in Florida and the number of nearby beaches the user wishes to visit. Currently, the model is set to find the most optimal route between these nearby beaches, but no more than 9 locations can be used - otherwise it is too "computationally expensive" (will take forever to run). The model will output in JSON the best route, the distance in miles between each location, the total distance, and a map of Florida with a tag on each beach and a line drawn between tags.
+
 The data was acquired from the website https://koordinates.com/layer/111589-florida-beach-names/.
 
 The dataset was constructed by reports from several users including beaches names, their length and the county they were located.
